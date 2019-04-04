@@ -111,6 +111,7 @@ public class Canvas
 
     /**
      * Gets a referece to the Canvas
+     * @return the Canvas instance
      */
     public static Canvas getInstance()
     {
