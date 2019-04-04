@@ -29,6 +29,24 @@ public class Text implements Shape
     }
       
     /**
+     * Sets the text message
+     * NOTE: the bounding box is not resized.
+     * @param message the text to display
+     */
+    public void setText(String message) {
+      label.setText(message);
+      Canvas.getInstance().repaint();
+    }
+    
+    /**
+     * Gets the text message
+     * @return the text displayed
+     */
+    public String getText() {
+      return label.getText();
+    }
+    
+    /**
      * Gets the leftmost x-position of the bounding box.
      * @return the leftmost x-position
      */
