@@ -1,8 +1,5 @@
-import graphicslib.*;
-
-
 public class Main {
   public static void main(String[] args) {
-    Canvas c = Canvas.getInstance();
+    Connect4Game game = new Connect4Game();
   }
 }
