@@ -38,6 +38,7 @@ public class Display {
                           squareSize-2);  // height
       }
     }
+
     
     // TODO: Initialize an array of circles for discs (initially empty)
     //       Initialize a cirle used for the preview
