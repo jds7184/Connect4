@@ -1,4 +1,5 @@
-//HIDE
+package graphicslib;
+
 public class Color
 {
     private int red;
