@@ -18,6 +18,7 @@ public class Display {
   /* Display constructor (change/modify this as you wish)
    * Assigned to: Colson
    */
+  //please work
   public Display() {
     canvas = Canvas.getInstance();
     
