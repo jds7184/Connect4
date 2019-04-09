@@ -15,6 +15,8 @@ public class Display {
   
   Circle previewDisc;
   
+  Text() score;
+  
   /* Display constructor (change/modify this as you wish)
    * Assigned to: Colson
    */
@@ -25,6 +27,8 @@ public class Display {
     Disc[][] board = Board.getInstance().getBoard();
     
     spaces = new Rectangle[board.length][board[0].length];
+    
+    scoreBoard = new Text();
     
     // Determine how big to make the squares of the board
     int squareSize = Math.min(bDispWidth / board[0].length,
