@@ -43,19 +43,23 @@ public class Board {
    * Assigned to: Madison
    */
   public int checkForConnectFour() {
-    int currentColor=-1;
-    int numRow=0;
-    for(int r=0; r<board.length(); r++){
-      for(int c=0; c<board.length(); c++){
+    for(int r=0; r<board.length; r++){
+      int currentColor=-1;
+      int numRow=0;
+      for(int c=0; c<board[r].length; c++){
         if(board[r][c]!=null){
-          if(currentColor=board[r][c].getColor()){
+          if(currentColor==board[r][c].getColor()){
             numRow++;
           }else{
             currentColor=board[r][c].getColor();
             numRow=1;
-          }if(numRow==4){
+          }
+          if(numRow==4){
             return currentColor;
           }
+        }else{
+          currentColor=-1;
+          numRow=0;
         }
       }
     } 
