@@ -25,7 +25,7 @@ public class Board {
    */
   public void dropDisc(Disc a, int column) {
     for (int r = board.length - 1; r >= 0; r--) {
-      if (board [r] [coloumn] == null) {
+      if (board [r] [column] == null) {
         board [r] [column] = a;
         break; 
       }
