@@ -21,8 +21,10 @@ public class Connect4Game implements KeyListener {
   public Connect4Game() {
     display = new Display();
     display.addKeyListener(this); // So we can receive keyboard input
-
+    
     // Continue here
+    p1score = 0;
+    computerScore = 0;
     
   } 
  
