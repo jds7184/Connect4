@@ -27,5 +27,6 @@ public class ComputerPlayer implements Player {
     */
     Board.getInstance().getBoard();
     return (int)Math.random()*6;
+    
   }
 }
