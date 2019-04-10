@@ -29,6 +29,7 @@ public class ComputerPlayer implements Player {
     for (int r = 0; r < 6; r++){
       for (int c = 0; c < 7; c++){
         //if(board[i][a].getColor())
+        
       }
     }
     
