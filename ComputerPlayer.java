@@ -25,6 +25,7 @@ public class ComputerPlayer implements Player {
     *if false drop the disc on a dics that is mine or on the side of mine
     *if their is none, drop a disc at a random location
     */
+    Board.getInstance().getBoard();
     return (int)Math.random()*6;
   }
 }
