@@ -22,7 +22,7 @@ public class Board {
   /* Adds the provided Disc into the specified 
    * column in the board 2-D array
    * Assigned to: Mallie
-   */
+   */ 
   public void dropDisc(Disc a, int column) {
     for (int r = board.length - 1; r >= 0; r--) {
       if (board [r] [column] == null) {
