@@ -27,7 +27,7 @@ public class Connect4Game implements KeyListener {
     computerScore = 0;
     currentColumnPreview = 0;
     ai = new ComputerPlayer();
-    display.updateBoard();
+    display = new Display();
     whoseTurn = (int)(Math.random()*2);
   } 
  
@@ -55,9 +55,18 @@ public class Connect4Game implements KeyListener {
    */  
   public void keyTyped(KeyEvent e) {
     if (e.getKeyText(e.getKeyCode()) == "Left") {
-      
+      currentColumnPreview = currentColumnPreview -1;
+      display.dropPreview(Disc.RED,currentColumnPreview);
+    }else if(e.getKeyText(e.getKeyCode()) == "Right"){ 
+        currentColumnPreview = currentColumnPreview +1;
+      display.dropPreview(Disc.RED,currentColumnPreview);
+    }else if (e.getKeyText(e.getKeyCode()) == "Down"){ 
+      Disc a=new Disc(Disc.RED);
+      Board.getInstance().dropDisc(a, currentColumnPreview);
+      display.updateBoard();
+      whoseTurn=1;
+      takeComputerTurn();
     }
-    
   }
   
   // Done. Don't change these:
