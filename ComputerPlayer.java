@@ -25,18 +25,12 @@ public class ComputerPlayer implements Player {
     *if false drop the disc on a dics that is mine or on the side of mine
     *if their is none, drop a disc at a random location
     */
-    //attempt to check for 3 in a row, any direction
-    for (int r = 0; r < 6; r++){
+   
+   //this just puts a disnc ontop of another disc that belongs to the computer player 
+    for (int r = 0; r < 6; r++){//if no 3 in a row, puts a disc on one that is already plaed and is my color
       for (int c = 0; c < 7; c++){
-        //if(board[i][a].getColor())
-        
-      }
-    }
-    
-    for (int i = 0; i < 6; i++){//if no 3 in a row, puts a disc on one that is already plaed and is my color
-      for (int a = 0; a < 7; a++){
-        if(board[i][a].isYellow() && i != 6)
-          return a;
+        if(board[r][c].isYellow() && i != 6 && board[r+1][c].getColor() != null)
+          return c;
       }
     }
     return (int)Math.random()*6;//if all else fails, places disc in a random place.
