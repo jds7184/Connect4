@@ -11,7 +11,7 @@ public class Display {
   
   Rectangle[][] spaces;
   
-  Circle[][] gamePieces;
+  Ellipse[][] gamePieces;
   
   Circle previewDisc;
   
@@ -58,7 +58,27 @@ public class Display {
    */
   public void updateBoard() {
     Disc[][] board = Board.getInstance().getBoard();
-    
+     int squareSize = Math.min(bDispWidth / board[0].length,
+                        bDispHeight / (board.length+1));
+    gamePieces = new Ellipse[board.length][board[0].length]; 
+    for (int r = 0; r < board.length; r++) {
+      for (int c = 0; c < board[0].length; c++) {
+        if(board[r][c]!= null){
+          
+          gamePieces[r][c] = new Ellipse(
+                          bDispMargins + c*squareSize+1, // x
+                          bDispMargins + (1+r)*squareSize+1, // y
+                          squareSize-2,   // width
+                          squareSize-2);  // height
+          if(board[r][c].getColor() == Disc.RED){
+             gamePieces[r][c].setColor(Color.RED); 
+          }
+          else {
+            board[r][c].setColor(Color.YELLOW);
+          }
+        }
+      }
+    }
     
   }
   
@@ -68,6 +88,7 @@ public class Display {
    */
   public void dropPreview(int color, int column) {
     
+      
   }
   
   // Done. Don't change this.
