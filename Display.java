@@ -17,6 +17,8 @@ public class Display {
   
   Text scoreP1;
   
+  Text scoreAI;
+  
   /* Display constructor (change/modify this as you wish)
    * Assigned to: Colson
    */
@@ -28,7 +30,9 @@ public class Display {
     
     spaces = new Rectangle[board.length][board[0].length];
     
-    scoreP1 = new Text(5, 5, " Player: ");
+    scoreP1 = new Text(5, 5, " Player: " );
+    
+    scoreAI = new Text(5, 20, " Computer: ");
     
     // Determine how big to make the squares of the board
     int squareSize = Math.min(bDispWidth / board[0].length,
@@ -53,8 +57,9 @@ public class Display {
   /* Updates the scores displayed on the screen
    * Assigned to: Colson
    */
-  public void updateScore(int p1score, int p2score) {
-    
+  public void updateScore(int p1score, int computerScore) {
+    scoreP1.setText( " Player: " + p1score);
+    scoreAI.setText( " Computer: " + computerScore);
   }
     
   /* Updates how the discs are displayed on the screen
