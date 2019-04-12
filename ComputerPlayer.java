@@ -10,13 +10,11 @@ public class ComputerPlayer implements Player {
   }
   
   /* Chooses a column to play a Disc into.
-   * Return the COLUMN index.
+   * Return the column index.
    * Assigned to: Michael
-   * 
    */
-  
-  
   public int selectColumn() {
+<<<<<<< HEAD
     Disc[][] board = Board.getInstance().getBoard();
     /*for now, this simply drops a disc at a random column
     *check for the next move by the player being a connect four 4 with a connect 4 method. 
@@ -34,6 +32,9 @@ public class ComputerPlayer implements Player {
       }
     }
     return (int)Math.random()*6;//if all else fails, places disc in a random place.
+=======
+>>>>>>> 7ebf9c21d0a40adcb4f7c67e0ec857ba83162a6d
     
+    return 0;
   }
 }
