@@ -37,9 +37,12 @@ public class Board {
    * Assigned to: Mallie
    */
   public void resetBoard() {
-    
+    for (int r =0; r < board.length; r++){
+      for (int c =0; c < board.length; c++) {
+        
+      }
+    }
   }
-  
   /* Checks the board to see if there are four
    * discs of the same color in a row.
    * Return -1 = no four in a row.
@@ -48,7 +51,6 @@ public class Board {
    * Assigned to: Madison
    */
   public int checkForConnectFour() {
-//<<<<<<< HEAD
     //horizontal
     for(int r=0; r<board.length; r++){
       int currentColor=-1;
@@ -115,8 +117,6 @@ public class Board {
      
 //=======
     
-     
-//>>>>>>> d74f56cac0774c1af4be4a0d2a1dab2c48c495ec
     return -1;
   }
   
