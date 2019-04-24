@@ -37,9 +37,12 @@ public class Board {
    * Assigned to: Mallie
    */
   public void resetBoard() {
-    
+    for (int r =0; r < board.length; r++){
+      for (int c =0; c < board.length; c++) {
+        
+      }
+    }
   }
-  
   /* Checks the board to see if there are four
    * discs of the same color in a row.
    * Return -1 = no four in a row.
@@ -48,8 +51,72 @@ public class Board {
    * Assigned to: Madison
    */
   public int checkForConnectFour() {
-    
+    //horizontal
+    for(int r=0; r<board.length; r++){
+      int currentColor=-1;
+      int numRow=0;
+      for(int c=0; c<board[r].length; c++){
+        if(board[r][c]!=null){
+          if(currentColor==board[r][c].getColor()){
+            numRow++;
+          }else{
+            currentColor=board[r][c].getColor();
+            numRow=1;
+          }
+          if(numRow==4){
+            return currentColor;
+          }
+        }else{
+          currentColor=-1;
+          numRow=0;
+        }
+      }
+    } 
+    //vertical
+      for(int c=0; c<board.length; c++){
+      int currentColor=-1;
+      int numRow=0;
+      for(int r=0; r<board[c].length; r++){
+        if(board[r][c]!=null){
+          if(currentColor==board[r][c].getColor()){
+            numRow++;
+          }else{
+            currentColor=board[r][c].getColor();
+            numRow=1;
+          }
+          if(numRow==4){
+            return currentColor;
+          }
+        }else{
+          currentColor=-1;
+          numRow=0;
+        }
+      }
+    }
+      //diagonal
+      for(int c=0; c<=board[0].length-4; c++){
+        int currentColor=-1;
+        int numRow=0;
+        for(int r=0; r<=board.length-4; r++){
+          if(currentColor== board[r][c].getColor() && currentColor== board[r+1][c+1].getColor() && currentColor== 
+             board[r+2][c+2].getColor() &&currentColor== board[r+3][c+3].getColor()){
+            return board[r][c].getColor();
+          }
+        }
+      }
+      for(int c=board[0].length; c<=board[0].length;c++){
+        int currentColor=-1;
+        int numRow=0;
+        for(int r=board.length; r<board.length;r++){
+          if(currentColor== board[r][c].getColor() && currentColor== board[r-1][c-1].getColor() && 
+                   currentColor== board[r-2][c-2].getColor() && currentColor== board[r-3][c-3].getColor()){
+            return board[r][c].getColor();
+          }
+        }
+      }
      
+//=======
+    
     return -1;
   }
   
