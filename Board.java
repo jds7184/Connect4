@@ -15,21 +15,14 @@ public class Board {
   private Board(int rows, int cols) {
     // Add constructor code here
     // Initialize the board 2-D array
-    board = new Disc [rows] [cols];
     
   }
     
   /* Adds the provided Disc into the specified 
    * column in the board 2-D array
    * Assigned to: Mallie
-   */ 
+   */
   public void dropDisc(Disc a, int column) {
-    for (int r = board.length - 1; r >= 0; r--) {
-      if (board [r] [column] == null) {
-        board [r] [column] = a;
-        break; 
-      }
-    }
   }
   
   /* Resets the board 2-D array to start a new
@@ -40,8 +33,8 @@ public class Board {
     for (int r =0; r < board.length; r++){
       for (int c =0; c < board.length; c++) {
         
-  }
-  }
+      }
+    }
   }
   /* Checks the board to see if there are four
    * discs of the same color in a row.
@@ -52,7 +45,7 @@ public class Board {
    */
   public int checkForConnectFour() {
     
-     
+    
     return -1;
   }
   
