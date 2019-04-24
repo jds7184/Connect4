@@ -23,14 +23,7 @@ public class Connect4Game implements KeyListener {
     display.addKeyListener(this); // So we can receive keyboard input
 
     // Continue here
-
-    p1score = 0;
-    computerScore = 0;
-    currentColumnPreview = 0;
-    ai = new ComputerPlayer();
-    display = new Display();
-    whoseTurn = (int)(Math.random()*2);
-
+    
   } 
  
   /* Called after the human finishes his/her turn.
@@ -39,10 +32,7 @@ public class Connect4Game implements KeyListener {
    * Assigned to: Kaleb
    */
   public void takeComputerTurn() {
-    while( whoseTurn == 1){
-      ai.selectColumn();
-      display.updateBoard();
-    }
+    
   }
   
   /* This handles keyboard input from the user.
@@ -69,6 +59,7 @@ public class Connect4Game implements KeyListener {
       whoseTurn=1;
       takeComputerTurn();
     }
+    
   }
   
   // Done. Don't change these:
