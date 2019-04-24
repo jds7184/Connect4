@@ -15,7 +15,7 @@ public class Board {
   private Board(int rows, int cols) {
     // Add constructor code here
     // Initialize the board 2-D array
-    
+    board = new Disc [rows] [cols];
     
   }
     
@@ -24,7 +24,12 @@ public class Board {
    * Assigned to: Mallie
    */
   public void dropDisc(Disc a, int column) {
-    
+    for (int r = board.length - 1; r >= 0; r--) {
+      if (board [r] [column] == null) {
+        board [r] [column] = a;
+        break; 
+      }
+    }
   }
   
   /* Resets the board 2-D array to start a new
@@ -86,6 +91,7 @@ public class Board {
         }
       }
     }
+      //diagonal
       for(int c=0; c<=board[0].length-4; c++){
         int currentColor=-1;
         int numRow=0;
@@ -109,12 +115,8 @@ public class Board {
      
 //=======
     
-<<<<<<< HEAD
      
 //>>>>>>> d74f56cac0774c1af4be4a0d2a1dab2c48c495ec
-=======
-    
->>>>>>> b9c197af23c1fd291fcf0a1d790585e9299f3cd9
     return -1;
   }
   
