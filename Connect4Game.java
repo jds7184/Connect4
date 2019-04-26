@@ -39,6 +39,7 @@ public class Connect4Game implements KeyListener {
    * Assigned to: Kaleb
    */
   public void takeComputerTurn() {
+    //should call select column and then update board
     while( whoseTurn == 1){
       ai.selectColumn();
       display.updateBoard();
